@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="directivePractice">
+  <head>
+    <meta charset="utf-8">
+    <title>Lesson Hider</title>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-controller="lessonCtrl">
+
+<h1> DevMountain Lesson Schedule </h1>
+
+<ul>
+      <lesson-hider ng-repeat="theLesson in lessons" lesson="theLesson" day-alert="announceDay(lesson, day)"></lesson-hider>
+</ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="lessonCtrl.js"></script>
+    <script src="lessonHider.js"></script>
+    <script src="lessonService.js"></script>
+  </body>
+</html>
